@@ -1,0 +1,22 @@
+.App {
+  text-align: center;
+  margin: 10px;
+}
+.button{
+  color:#ffffff;
+  background:#0f76bc;
+  height: 40px;
+  width: 100px;
+  border: 1px solid grey;
+  font-size: 20px;
+  margin:0 auto;
+}
+.hide{
+  display: none;
+}
+.show{
+  display: block;
+}
+.loading{
+  font-weight: 600;
+}
