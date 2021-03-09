@@ -5,7 +5,7 @@ import { LifeCycleUpdate } from './LifeCycleUpdate';
 class App extends Component{
   constructor(props){
     super(props);
-    this.state={fname:"murthy",lname:"Addepalli",noOfCakes:0,nofOfIceCreams:0};
+    this.state={fname:"murthy",lname:"Addepalli",noOfCakes:10,nofOfIceCreams:10};
   console.log("constructor");
   }
   static getDerivedStateFromProps = (pros,state)=>{
@@ -24,10 +24,14 @@ class App extends Component{
     this.setState(newState);
   }
   buyCake = ()=>{
-    this.setState({...this.state,noOfCakes:this.state.noOfCakes+1});
+    if(this.state.noOfCakes>0)
+    this.setState({...this.state,noOfCakes:this.state.noOfCakes-1});
+    return null;
   }
   buyIceCream = ()=>{
-    this.setState({...this.state,nofOfIceCreams:this.state.nofOfIceCreams+1});
+    if(this.state.nofOfIceCreams>0)
+    this.setState({...this.state,nofOfIceCreams:this.state.nofOfIceCreams-1});
+    return null;
   }
 render(){
   console.log("render",this.state);
