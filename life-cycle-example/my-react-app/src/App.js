@@ -35,8 +35,7 @@ class App extends Component {
     return (
       <Auxilary>
         <div className="App">
-          <Header />
-          <h1 onClick={this.clickHandler}>Bakery Items</h1>
+          <Header />          
           <div>
             <label>Number of Cakes : {this.state.noOfCakes}</label>
             <div><button onClick={this.buyCake}>Buy Cake</button></div>

@@ -3,7 +3,7 @@ import React from 'react'
 function Header() {
     return (
         <div>
-            <h1 style={{textAlign:"center"}}>Bakery</h1>
+            <h1 style={{textAlign:"center"}}>Bakery Shop</h1>
         </div>
     )
 }
