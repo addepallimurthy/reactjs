@@ -1,4 +1,5 @@
 import React from 'react';
+import { Auxilary } from './Auxilary';
 
 export class LifeCycleUpdate extends React.Component{
     constructor(props){
@@ -22,9 +23,17 @@ export class LifeCycleUpdate extends React.Component{
         return null;
     }
 render(){
-    console.log("update life cycle render");
+    console.log("update life cycle render",this.props);
     return(
-        <h2>life cycle 2</h2>
+        <Auxilary>
+        <ul style={{listStyle:"none",padding:"0px"}}>
+            <li><u><strong>List of Items</strong></u></li>
+            <li>Cake:{this.props.cake}</li>
+            <li>Icecream:{this.props.icecreams}</li>
+        </ul>
+        <h2>Total Items Purchased:{this.props.purchasedItems}</h2>
+        <h2>Total Price:{this.props.totalPrice}</h2>
+        </Auxilary>
     )
 }
 }
