@@ -32,9 +32,9 @@ const buildBakeryItems = (item, props) => {
     <div><button key={item} onClick={item==="cake"?props.buyCake:props.buyIceCream}>{item === "cake" ? `Buy Cake` : `Buy IceCream`}</button></div>
   </li>);
 }
-const mapStateToProps = (state) => ({
-  backery: state
-})
+const mapStateToProps = (state) => {
+  return {backery: state}
+}
 
 const mapDispatchToProps = dispatch => {
   return {
