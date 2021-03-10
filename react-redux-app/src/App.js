@@ -10,9 +10,15 @@ export class App extends Component {
         <ul>
           {
             Object.keys(this.props.backery).map(item => {
-              return buildBakeryItems(item, this.props);
+              return  Object.keys(this.props.backery[item]).length ? buildBakeryItems(item, this.props) : null;
             })
           }
+          <div>
+            <label>Purchased Items : {this.props.backery.purchasedItems}</label>
+            </div>
+            <div>
+            <label>Total Price : {this.props.backery.totalPrice}</label>
+          </div>
         </ul>
       </div>
 
@@ -21,7 +27,7 @@ export class App extends Component {
 }
 const buildBakeryItems = (item, props) => {
   return (<li key={item} style={{ listStyle: "none" }}>
-    <label>{item === "cake" ? `No Of Cakes : ${props.backery[item][item]["noOfCakes"]}` : `No Of IceCreams : ${props.backery[item][item]["noOfIceCreams"]}`}
+    <label>{item === "cake" ? `No Of Cakes : ${props.backery[item]["noOfCakes"]}` : `No Of IceCreams : ${props.backery[item]["noOfIceCreams"]}`}
     </label>
     <div><button key={item} onClick={item==="cake"?props.buyCake:props.buyIceCream}>{item === "cake" ? `Buy Cake` : `Buy IceCream`}</button></div>
   </li>);

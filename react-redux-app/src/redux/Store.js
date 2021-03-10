@@ -1,11 +1,8 @@
 import { Provider } from 'react-redux';
-import {createStore,combineReducers} from 'redux';
-import {cakeReducer,iceCreamReducer} from './Reducers'
+import {createStore} from 'redux';
+import {cakeReducer} from './Reducers'
 
-const store = createStore(combineReducers({
-    cake:cakeReducer,
-    icecream:iceCreamReducer
-}));
+const store = createStore(cakeReducer);
 
 
 const StoreProvider = props => (
