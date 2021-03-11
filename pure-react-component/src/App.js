@@ -27,11 +27,12 @@ export class App extends PureComponent {
 
   render() {
 console.log('app render');
+const name = this.state.name;
     return (
       <div>
-        <ParentComponent name={this.state.name} />
-        <RegularComponent name={this.state.name} />
-        <PureComp name={this.state.name} />
+        <ParentComponent name={name} />
+        <RegularComponent name={name} />
+        <PureComp name={name} />
 
       </div>
     )
