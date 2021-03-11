@@ -7,7 +7,7 @@ export class App extends PureComponent {
   constructor(props) {
     super(props);
     this.state = {
-       name:"Murthy"
+      name: "Murthy"
     }
   }
   componentDidMount = () => {
@@ -15,9 +15,9 @@ export class App extends PureComponent {
   }
   timer = () => {
     setInterval(() => {
-      
+
       this.setState({
-        name:"Murthy"
+        name: "Murthy"
       })
     }, 10000);
   }
@@ -26,8 +26,8 @@ export class App extends PureComponent {
   }
 
   render() {
-console.log('app render');
-const name = this.state.name;
+    console.log('app render');
+    const name = this.state.name;
     return (
       <div>
         <ParentComponent name={name} />
